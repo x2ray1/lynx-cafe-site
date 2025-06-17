@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Home</title>
+  <!-- Tailwind CSS -->
+  <link href="assets/css/tailwind-output.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-darkbg text-white min-h-screen flex flex-col font-sans overflow-x-hidden">
+  <!-- Particle background -->
+  <div id="particles-js" aria-hidden="true"></div>
+  <!-- Header/Navbar -->
+  <nav class="w-full p-4 flex justify-between items-center bg-card shadow-md z-10 relative" aria-label="Main navigation">
+    <a href="index.html" class="text-2xl font-bold tracking-tight text-primary focus:outline-primary" aria-label="Home">Your Name</a>
+    <ul class="flex space-x-6" role="menubar">
+      <li role="none"><a href="about.html" class="nav-link" aria-label="About" tabindex="0">About</a></li>
+      <li role="none"><a href="contact.html" class="nav-link" aria-label="Contact" tabindex="0">Contact</a></li>
+      <li role="none">
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-primary/10 transition focus:outline-primary" tabindex="0">
+          <svg id="theme-icon" class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with blob SVG -->
+  <section class="relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden">
+    <!-- SVG Blob -->
+    <svg class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 opacity-40 md:opacity-60" width="800" height="500" viewBox="0 0 800 500">
+      <defs>
+        <linearGradient id="blobGradient" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#6366f1"/>
+          <stop offset="100%" stop-color="#f472b6"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#blobGradient)" d="M462.5,410Q361,520,224,405Q87,290,196.5,173.5Q306,57,488.5,93.5Q671,130,635,265Q599,400,462.5,410Z"/>
+    </svg>
+    <!-- Avatar -->
+    <img src="assets/img/avatar.jpg" alt="Profile photo of Your Name" class="w-32 h-32 rounded-full border-4 border-primary shadow-xl mb-6 object-cover bg-card" tabindex="0"/>
+    <!-- Typing effect -->
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4" id="typed-hero" aria-live="polite"></h1>
+    <p class="text-lg text-gray-400 max-w-xl mb-8">Connect with me on your favorite platforms or learn more about my work below.</p>
+    <a href="about.html" class="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:shadow-lg transition hover:bg-secondary focus:outline-primary" aria-label="Learn More About Me" tabindex="0">Learn More</a>
+  </section>
+
+  <!-- Cards Section -->
+  <main class="flex-1 w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mb-16">
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-aos="fade-up" data-aos-delay="0" tabindex="0" aria-label="WhatsApp card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/whatsapp.svg" alt="WhatsApp" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">WhatsApp</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Message me on WhatsApp.</p>
+      <!-- Toggle Switch -->
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to WhatsApp">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-aos="fade-up" data-aos-delay="100" tabindex="0" aria-label="Twitter card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/twitter.svg" alt="Twitter" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">Twitter</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Follow me on Twitter.</p>
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to Twitter">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-aos="fade-up" data-aos-delay="200" tabindex="0" aria-label="GitHub card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/github.svg" alt="GitHub" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">GitHub</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Check out my projects.</p>
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to GitHub">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <!-- Add more cards as needed -->
+  </main>
+
+  <!-- Skills Section -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Skills">
+    <h2 class="text-2xl font-bold mb-6" data-aos="fade-right">Skills</h2>
+    <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="100">
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">TypeScript</span>
+      <span class="skill-badge">React</span>
+      <span class="skill-badge">TailwindCSS</span>
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">Accessibility</span>
+      <span class="skill-badge">UI/UX</span>
+      <!-- Add more skills -->
+    </div>
+  </section>
+
+  <!-- Timeline/Experience Section -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Timeline">
+    <h2 class="text-2xl font-bold mb-6" data-aos="fade-right">My Journey</h2>
+    <ol class="timeline">
+      <li data-aos="fade-up" data-aos-delay="0">
+        <div class="timeline-icon bg-primary"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025</span>
+          <h3 class="timeline-title">Lead Frontend Engineer</h3>
+          <p>Started leading frontend projects at Awesome Corp, building scalable web applications.</p>
+        </div>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-icon bg-secondary"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023</span>
+          <h3 class="timeline-title">Graduated University</h3>
+          <p>Completed BSc in Computer Science with distinction.</p>
+        </div>
+      </li>
+      <li data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-icon bg-primary"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022</span>
+          <h3 class="timeline-title">Frontend Internship</h3>
+          <p>Interned at StartupX, focusing on React and accessibility.</p>
+        </div>
+      </li>
+      <!-- Add more timeline items as needed -->
+    </ol>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full py-6 text-center text-gray-500 text-sm border-t border-gray-800 mt-auto z-10 relative">
+    &copy; 2025 Your Name. Crafted with <span class="text-primary">TailwindCSS</span>.
+  </footer>
+
+  <!-- JS: AOS.js, Particles.js, main.js (typing, transitions, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

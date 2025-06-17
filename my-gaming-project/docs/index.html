@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Home</title>
+  <!-- Tailwind CSS -->
+  <link href="assets/css/tailwind-output.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <!-- Glider.js Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"/>
+  <!-- AOS (fallback, for legacy browsers) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-darkbg text-white min-h-screen flex flex-col font-sans overflow-x-hidden">
+  <!-- Particles.js background -->
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <!-- Header/Navbar -->
+  <nav class="w-full p-4 flex justify-between items-center bg-card shadow-md z-20 relative" aria-label="Main navigation">
+    <a href="index.html" class="text-2xl font-bold tracking-tight text-primary focus:outline-primary" aria-label="Home">Your Name</a>
+    <ul class="flex space-x-6 items-center" role="menubar">
+      <li role="none"><a href="about.html" class="nav-link" aria-label="About" tabindex="0" data-i18n="about">About</a></li>
+      <li role="none"><a href="contact.html" class="nav-link" aria-label="Contact" tabindex="0" data-i18n="contact">Contact</a></li>
+      <li role="none"><a href="blog.html" class="nav-link" aria-label="Blog" tabindex="0" data-i18n="blog">Blog</a></li>
+      <li role="none">
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-primary/10 transition focus:outline-primary" tabindex="0">
+          <svg id="theme-icon" class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+        </button>
+      </li>
+      <li role="none">
+        <!-- Language switcher -->
+        <button id="lang-toggle" aria-label="Switch Language" class="ml-3 px-2 py-1 rounded focus:outline-primary bg-primary/10 text-primary font-semibold" tabindex="0">
+          <span id="lang-current">EN</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with animated blob and avatar -->
+  <section class="relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden">
+    <!-- Animated SVG blob -->
+    <svg id="hero-blob" class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 opacity-50 md:opacity-70 pointer-events-none"
+      width="800" height="500" viewBox="0 0 800 500"></svg>
+    <!-- Avatar -->
+    <img src="assets/img/avatar.jpg" alt="Profile photo of Your Name" class="w-32 h-32 rounded-full border-4 border-primary shadow-xl mb-6 object-cover bg-card" tabindex="0"/>
+    <!-- Typing effect -->
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4" id="typed-hero" aria-live="polite"></h1>
+    <p class="text-lg text-gray-400 max-w-xl mb-8" data-i18n="hero_sub">Connect with me on your favorite platforms or learn more about my work below.</p>
+    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <a href="about.html" class="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:shadow-lg transition hover:bg-secondary focus:outline-primary" aria-label="Learn More About Me" tabindex="0" data-i18n="learn_more">Learn More</a>
+      <a href="assets/resume.pdf" download class="inline-block px-6 py-3 bg-secondary text-white rounded-lg font-semibold shadow hover:shadow-lg transition hover:bg-primary focus:outline-primary" aria-label="Download Resume" tabindex="0" data-i18n="download_resume">Download Résumé</a>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="flex-1 w-full max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mb-16" aria-label="Social Links">
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-io="fade-up" tabindex="0" aria-label="WhatsApp card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/whatsapp.svg" alt="WhatsApp" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">WhatsApp</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Message me on WhatsApp.</p>
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to WhatsApp">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-io="fade-up" tabindex="0" aria-label="Twitter card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/twitter.svg" alt="Twitter" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">Twitter</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Follow me on Twitter.</p>
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to Twitter">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="card group p-6 rounded-2xl shadow-lg bg-card flex flex-col items-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300"
+         data-io="fade-up" tabindex="0" aria-label="GitHub card">
+      <div class="w-12 h-12 mb-4 flex items-center justify-center bg-primary/10 rounded-full">
+        <img src="assets/img/github.svg" alt="GitHub" class="w-8 h-8"/>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">GitHub</h2>
+      <p class="text-gray-400 text-sm mb-6 text-center">Check out my projects.</p>
+      <label class="relative inline-flex items-center cursor-pointer mt-auto" aria-label="Go to GitHub">
+        <input type="checkbox" class="toggle-switch" data-link="#" aria-checked="false" tabindex="0"/>
+        <span class="slider"></span>
+      </label>
+    </div>
+    <!-- Add more cards as needed -->
+  </section>
+
+  <!-- Skills Section with filtering -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Skills">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold" data-i18n="skills">Skills</h2>
+      <div class="flex gap-2">
+        <button class="skill-filter-btn px-3 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline-primary active" data-filter="all" data-i18n="all">All</button>
+        <button class="skill-filter-btn px-3 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline-primary" data-filter="frontend" data-i18n="frontend">Frontend</button>
+        <button class="skill-filter-btn px-3 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline-primary" data-filter="backend" data-i18n="backend">Backend</button>
+        <button class="skill-filter-btn px-3 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline-primary" data-filter="other" data-i18n="other">Other</button>
+      </div>
+    </div>
+    <div id="skills-list" class="flex flex-wrap gap-4"></div>
+  </section>
+
+  <!-- Timeline/Experience with filtering -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Timeline">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold" data-i18n="timeline">My Journey</h2>
+      <div class="flex gap-2">
+        <button class="timeline-filter-btn px-3 py-1 rounded bg-secondary/10 text-secondary font-semibold focus:outline-primary active" data-filter="all" data-i18n="all">All</button>
+        <button class="timeline-filter-btn px-3 py-1 rounded bg-secondary/10 text-secondary font-semibold focus:outline-primary" data-filter="education" data-i18n="education">Education</button>
+        <button class="timeline-filter-btn px-3 py-1 rounded bg-secondary/10 text-secondary font-semibold focus:outline-primary" data-filter="work" data-i18n="work">Work</button>
+        <button class="timeline-filter-btn px-3 py-1 rounded bg-secondary/10 text-secondary font-semibold focus:outline-primary" data-filter="other" data-i18n="other">Other</button>
+      </div>
+    </div>
+    <ol id="timeline-list" class="timeline"></ol>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Testimonials">
+    <h2 class="text-2xl font-bold mb-6" data-i18n="testimonials">Testimonials</h2>
+    <div class="glider-contain">
+      <div class="glider" id="testimonials-carousel" role="region" aria-label="Testimonials Carousel"></div>
+      <button aria-label="Previous" class="glider-prev bg-card text-primary rounded-full shadow p-2 mx-2"><svg width="24" height="24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+      <button aria-label="Next" class="glider-next bg-card text-primary rounded-full shadow p-2 mx-2"><svg width="24" height="24"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+      <div id="testimonials-dots" class="glider-dots mt-2"></div>
+    </div>
+  </section>
+
+  <!-- Blog preview section -->
+  <section class="w-full max-w-3xl mx-auto px-4 mb-16" aria-label="Latest Blog Posts">
+    <h2 class="text-2xl font-bold mb-6" data-i18n="blog">Blog</h2>
+    <div id="blog-preview-list" class="grid gap-6 md:grid-cols-2"></div>
+    <a href="blog.html" class="inline-block mt-6 px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:shadow-lg transition hover:bg-secondary focus:outline-primary" data-i18n="view_all_posts">View All Posts</a>
+  </section>
+
+  <footer class="w-full py-6 text-center text-gray-500 text-sm border-t border-gray-800 mt-auto z-10 relative">
+    &copy; 2025 Your Name. Crafted with <span class="text-primary">TailwindCSS</span>.
+  </footer>
+
+  <!-- Core JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Local JS -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/testimonials.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

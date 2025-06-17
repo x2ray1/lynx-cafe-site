@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Your Name</title>
+  <link href="assets/css/tailwind-output.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-darkbg text-white min-h-screen flex flex-col font-sans fade-page">
+  <nav class="w-full p-4 flex justify-between items-center bg-card shadow-md z-10 relative" aria-label="Main navigation">
+    <a href="index.html" class="text-2xl font-bold tracking-tight text-primary" aria-label="Home">Your Name</a>
+    <ul class="flex space-x-6" role="menubar">
+      <li role="none"><a href="about.html" class="nav-link" aria-label="About" tabindex="0">About</a></li>
+      <li role="none"><a href="contact.html" class="nav-link" aria-label="Contact" tabindex="0">Contact</a></li>
+      <li role="none">
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-primary/10 transition focus:outline-primary" tabindex="0">
+          <svg id="theme-icon" class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="flex-1 flex flex-col justify-center items-center px-4 py-20">
+    <div class="w-full max-w-xl bg-card p-8 rounded-2xl shadow-lg flex flex-col items-center" data-aos="fade-up">
+      <img src="assets/img/avatar.jpg" alt="Profile photo of Your Name" class="w-32 h-32 rounded-full border-4 border-primary shadow-xl mb-6 object-cover bg-card" tabindex="0"/>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">About Me</h1>
+      <p class="max-w-2xl text-gray-300 text-center mb-10">
+        <!-- Replace with your info -->
+        Hi! I'm Your Name, a passionate frontend developer focused on building accessible, beautiful, and interactive web apps. I love bringing ideas to life with code, design, and a splash of creativity.
+      </p>
+      <a href="contact.html" class="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold shadow hover:shadow-lg transition hover:bg-secondary focus:outline-primary" aria-label="Contact Me" tabindex="0">Contact Me</a>
+    </div>
+  </main>
+
+  <footer class="w-full py-6 text-center text-gray-500 text-sm border-t border-gray-800 mt-auto z-10 relative">
+    &copy; 2025 Your Name.
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

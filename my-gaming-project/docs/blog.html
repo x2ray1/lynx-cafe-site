@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Your Name</title>
+  <link href="assets/css/tailwind-output.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-darkbg text-white min-h-screen flex flex-col font-sans">
+  <nav class="w-full p-4 flex justify-between items-center bg-card shadow-md z-10 relative" aria-label="Main navigation">
+    <a href="index.html" class="text-2xl font-bold tracking-tight text-primary" aria-label="Home">Your Name</a>
+    <ul class="flex space-x-6 items-center" role="menubar">
+      <li role="none"><a href="about.html" class="nav-link" aria-label="About" tabindex="0">About</a></li>
+      <li role="none"><a href="contact.html" class="nav-link" aria-label="Contact" tabindex="0">Contact</a></li>
+      <li role="none"><a href="blog.html" class="nav-link active" aria-label="Blog" tabindex="0">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="flex-1 w-full max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6">Blog</h1>
+    <div id="blog-list" class="grid gap-8"></div>
+  </main>
+
+  <footer class="w-full py-6 text-center text-gray-500 text-sm border-t border-gray-800 mt-auto z-10 relative">
+    &copy; 2025 Your Name.
+  </footer>
+  <script src="assets/js/blog.js"></script>
+</body>
+</html>

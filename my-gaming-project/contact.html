@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Your Name</title>
+  <link href="assets/css/tailwind-output.css" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-darkbg text-white min-h-screen flex flex-col font-sans fade-page">
+  <nav class="w-full p-4 flex justify-between items-center bg-card shadow-md z-10 relative" aria-label="Main navigation">
+    <a href="index.html" class="text-2xl font-bold tracking-tight text-primary" aria-label="Home">Your Name</a>
+    <ul class="flex space-x-6" role="menubar">
+      <li role="none"><a href="about.html" class="nav-link" aria-label="About" tabindex="0">About</a></li>
+      <li role="none"><a href="contact.html" class="nav-link" aria-label="Contact" tabindex="0">Contact</a></li>
+      <li role="none">
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-primary/10 transition focus:outline-primary" tabindex="0">
+          <svg id="theme-icon" class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="flex-1 flex flex-col justify-center items-center px-4 py-20">
+    <form action="#" class="w-full max-w-md bg-card p-8 rounded-2xl shadow-lg flex flex-col space-y-6" data-aos="fade-up" aria-label="Contact form">
+      <h1 class="text-3xl md:text-4xl font-bold mb-6">Contact</h1>
+      <p class="max-w-xl text-gray-300 text-center mb-4">
+        Want to get in touch? Fill out the form below or reach out via social media cards on the homepage.
+      </p>
+      <label class="sr-only" for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Your Name" class="input" aria-label="Your name" autocomplete="name" tabindex="0"/>
+      <label class="sr-only" for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Your Email" class="input" aria-label="Your email" autocomplete="email" tabindex="0"/>
+      <label class="sr-only" for="message">Your Message</label>
+      <textarea id="message" placeholder="Your Message" rows="4" class="input" aria-label="Your message" tabindex="0"></textarea>
+      <button type="submit" class="bg-primary text-white py-2 rounded-lg font-semibold hover:bg-secondary transition focus:outline-primary" aria-label="Send" tabindex="0">Send</button>
+    </form>
+  </main>
+
+  <footer class="w-full py-6 text-center text-gray-500 text-sm border-t border-gray-800 mt-auto z-10 relative">
+    &copy; 2025 Your Name.
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
